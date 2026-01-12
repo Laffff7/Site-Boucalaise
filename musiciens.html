@@ -13,23 +13,55 @@
 </head>
 <body class="bg-gray-50 text-green-900 font-sans">
 
- <!-- Navbar -->
- <nav class="bg-green-700 text-white px-6 py-4 flex justify-between items-center">
-  <div class="flex items-center gap-3">
-    <div class="bg-white rounded-full p-1">
-      <img src="img/logo_boucalaise.png" class="w-20 h-20 rounded-full" alt="Logo" />
+<!-- Navbar (responsive) -->
+<nav class="bg-green-700 text-white px-6 py-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <!-- Logo + titre -->
+    <a href="index.html" class="flex items-center gap-3 min-w-0">
+      <div class="bg-white rounded-full p-1 shrink-0">
+        <img src="logo_boucalaise.png" class="w-14 h-14 md:w-20 md:h-20 rounded-full" alt="Logo" />
+      </div>
+      <span class="text-lg md:text-2xl font-bold truncate">Fanfare La Boucalaise</span>
+    </a>
+
+    <!-- Bouton menu (mobile) -->
+    <button id="menuBtn"
+      class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-green-600"
+      aria-label="Ouvrir le menu">
+      <!-- icône hamburger -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Liens (desktop) -->
+    <div class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:underline">Accueil</a>
+      <a href="fanfare.html" class="hover:underline">La Fanfare</a>
+      <a href="musiciens.html" class="hover:underline">Nos Musiciens</a>
+      <a href="morceaux.html" class="hover:underline">Nos Morceaux</a>
+      <a href="sponsors.html" class="hover:underline">Nos Sponsors</a>
+      <a href="rejoindre.html" class="hover:underline">Nous Rejoindre</a>
     </div>
-    <span class="text-2xl font-bold">Fanfare La Boucalaise</span>
   </div>
-  <div class="flex gap-6 text-sm">
-    <a href="index.html" class="hover:underline">Accueil</a>
-    <a href="fanfare.html" class="hover:underline">La Fanfare</a>
-    <a href="musiciens.html" class="hover:underline">Nos Musiciens</a>
-    <a href="morceaux.html" class="hover:underline">Nos Morceaux</a>
-    <a href="sponsors.html" class="hover:underline">Nos Sponsors</a>
-    <a href="rejoindre.html" class="hover:underline">Nous Rejoindre</a>
+
+  <!-- Menu mobile (dépliable) -->
+  <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2 text-sm">
+    <a href="index.html" class="block px-3 py-2 rounded hover:bg-green-600">Accueil</a>
+    <a href="fanfare.html" class="block px-3 py-2 rounded hover:bg-green-600">La Fanfare</a>
+    <a href="musiciens.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Musiciens</a>
+    <a href="morceaux.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Morceaux</a>
+    <a href="sponsors.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Sponsors</a>
+    <a href="rejoindre.html" class="block px-3 py-2 rounded hover:bg-green-600">Nous Rejoindre</a>
   </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+
 
   <!-- Titre -->
   <section class="py-10 px-6 text-center">
@@ -871,3 +903,4 @@
 
 </body>
 </html>
+
