@@ -24,7 +24,6 @@
       <button id="menuBtn"
         class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-green-600"
         aria-label="Ouvrir le menu">
-        <!-- icône hamburger -->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -58,7 +57,7 @@
     btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   </script>
 
-  <!-- Hero section (responsive + overlay pour lisibilité) -->
+  <!-- Hero section (responsive + overlay) -->
   <section class="relative bg-cover bg-center text-white"
            style="background-image: url('img/accueil/Accueil.jpg');">
     <div class="absolute inset-0 bg-black/35"></div>
@@ -72,7 +71,7 @@
     </div>
   </section>
 
-  <!-- Boutons liens (2 colonnes en mobile vertical, 3 max en tablette/phone large) -->
+  <!-- Boutons liens (2 colonnes en mobile vertical, 3 max en tablette/phone large, centré si dernière ligne incomplète) -->
   <section class="py-10 px-4 sm:px-6">
     <div class="max-w-6xl mx-auto grid gap-4 sm:gap-6 text-center
                 grid-cols-2 sm:grid-cols-3
@@ -80,31 +79,31 @@
                 justify-items-center">
 
       <a href="fanfare.html"
-         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+         class="w-full max-w-sm min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
         <p class="text-base md:text-lg font-bold mb-2">📜 Histoire</p>
         <p class="text-sm md:text-base text-green-900/80">Découvrez l’histoire de la Fanfare la Boucalaise</p>
       </a>
 
       <a href="musiciens.html"
-         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+         class="w-full max-w-sm min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
         <p class="text-base md:text-lg font-bold mb-2">🎺 Musiciens</p>
         <p class="text-sm md:text-base text-green-900/80">Découvrez par pupitres, les musiciens qui font vivre la Fanfare</p>
       </a>
 
       <a href="morceaux.html"
-         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+         class="w-full max-w-sm min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
         <p class="text-base md:text-lg font-bold mb-2">🎶 Morceaux</p>
         <p class="text-sm md:text-base text-green-900/80">Découvrez nos morceaux alliant dynamisme et actualité</p>
       </a>
 
       <a href="sponsors.html"
-         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+         class="w-full max-w-sm min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
         <p class="text-base md:text-lg font-bold mb-2">🤝 Sponsors</p>
         <p class="text-sm md:text-base text-green-900/80">Découvrez nos sponsors</p>
       </a>
 
       <a href="rejoindre.html"
-         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+         class="w-full max-w-sm min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
         <p class="text-base md:text-lg font-bold mb-2">🤩 Rejoindre</p>
         <p class="text-sm md:text-base text-green-900/80">Musicien débutant ou confirmé, on t’attend</p>
       </a>
@@ -112,7 +111,7 @@
     </div>
   </section>
 
-  <!-- Prochain événement (grille responsive, 2 colonnes en mobile, 3 max tablette) -->
+  <!-- Prochain événement (même logique : centré si dernière ligne incomplète) -->
   <section class="px-4 sm:px-6 py-10 bg-green-50">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-xl sm:text-2xl font-bold mb-6">🎉 2025 - Nos événements Clés</h2>
@@ -122,27 +121,27 @@
                   md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
                   justify-items-center">
 
-        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+        <div class="w-full max-w-sm min-w-[140px] bg-white rounded-2xl p-4 shadow">
           <p class="text-base md:text-lg font-semibold text-green-700">Fêtes du Boucau & de la Mer</p>
           <p class="text-sm text-gray-600">Du 6 au 9 Juin</p>
         </div>
 
-        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+        <div class="w-full max-w-sm min-w-[140px] bg-white rounded-2xl p-4 shadow">
           <p class="text-base md:text-lg font-semibold text-green-700">Répétitions quartiers</p>
           <p class="text-sm text-gray-600">Vendredis 13 et 20 Juin</p>
         </div>
 
-        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+        <div class="w-full max-w-sm min-w-[140px] bg-white rounded-2xl p-4 shadow">
           <p class="text-base md:text-lg font-semibold text-green-700">Animation Camping - Lou Ptit Poun</p>
           <p class="text-sm text-gray-600">17, 24, 30 Juillet · 07, 14, 28 Août</p>
         </div>
 
-        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+        <div class="w-full max-w-sm min-w-[140px] bg-white rounded-2xl p-4 shadow">
           <p class="text-base md:text-lg font-semibold text-green-700">Guinguette</p>
           <p class="text-sm text-gray-600">Samedi 20 Septembre</p>
         </div>
 
-        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+        <div class="w-full max-w-sm min-w-[140px] bg-white rounded-2xl p-4 shadow">
           <p class="text-base md:text-lg font-semibold text-green-700">Sainte Cécile</p>
           <p class="text-sm text-gray-600">Dimanche 23 Novembre</p>
         </div>
@@ -176,3 +175,5 @@
 
 </body>
 </html>
+
+
