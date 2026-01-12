@@ -6,167 +6,173 @@
   <title>La Boucalaise</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50 text-green-900 font-sans">
 
-<!-- Navbar (responsive) -->
-<nav class="bg-green-700 text-white px-6 py-4">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
-    <!-- Logo + titre -->
-    <a href="index.html" class="flex items-center gap-3 min-w-0">
-      <div class="bg-white rounded-full p-1 shrink-0">
-        <img src="logo_boucalaise.png" class="w-14 h-14 md:w-20 md:h-20 rounded-full" alt="Logo" />
+  <!-- Navbar (responsive) -->
+  <nav class="bg-green-700 text-white px-4 sm:px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <!-- Logo + titre -->
+      <a href="index.html" class="flex items-center gap-3 min-w-0">
+        <div class="bg-white rounded-full p-1 shrink-0">
+          <img src="logo_boucalaise.png" class="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 rounded-full" alt="Logo" />
+        </div>
+        <span class="text-base sm:text-lg md:text-2xl font-bold truncate">Fanfare La Boucalaise</span>
+      </a>
+
+      <!-- Bouton menu (mobile) -->
+      <button id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-green-600"
+        aria-label="Ouvrir le menu">
+        <!-- icône hamburger -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Liens (desktop) -->
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="fanfare.html" class="hover:underline">La Fanfare</a>
+        <a href="musiciens.html" class="hover:underline">Nos Musiciens</a>
+        <a href="morceaux.html" class="hover:underline">Nos Morceaux</a>
+        <a href="sponsors.html" class="hover:underline">Nos Sponsors</a>
+        <a href="rejoindre.html" class="hover:underline">Nous Rejoindre</a>
       </div>
-      <span class="text-lg md:text-2xl font-bold truncate">Fanfare La Boucalaise</span>
-    </a>
-
-    <!-- Bouton menu (mobile) -->
-    <button id="menuBtn"
-      class="md:hidden inline-flex items-center justify-center p-2 rounded hover:bg-green-600"
-      aria-label="Ouvrir le menu">
-      <!-- icône hamburger -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-    <!-- Liens (desktop) -->
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="index.html" class="hover:underline">Accueil</a>
-      <a href="fanfare.html" class="hover:underline">La Fanfare</a>
-      <a href="musiciens.html" class="hover:underline">Nos Musiciens</a>
-      <a href="morceaux.html" class="hover:underline">Nos Morceaux</a>
-      <a href="sponsors.html" class="hover:underline">Nos Sponsors</a>
-      <a href="rejoindre.html" class="hover:underline">Nous Rejoindre</a>
     </div>
-  </div>
 
-  <!-- Menu mobile (dépliable) -->
-  <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2 text-sm">
-    <a href="index.html" class="block px-3 py-2 rounded hover:bg-green-600">Accueil</a>
-    <a href="fanfare.html" class="block px-3 py-2 rounded hover:bg-green-600">La Fanfare</a>
-    <a href="musiciens.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Musiciens</a>
-    <a href="morceaux.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Morceaux</a>
-    <a href="sponsors.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Sponsors</a>
-    <a href="rejoindre.html" class="block px-3 py-2 rounded hover:bg-green-600">Nous Rejoindre</a>
-  </div>
-</nav>
+    <!-- Menu mobile (dépliable) -->
+    <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2 text-sm">
+      <a href="index.html" class="block px-3 py-2 rounded hover:bg-green-600">Accueil</a>
+      <a href="fanfare.html" class="block px-3 py-2 rounded hover:bg-green-600">La Fanfare</a>
+      <a href="musiciens.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Musiciens</a>
+      <a href="morceaux.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Morceaux</a>
+      <a href="sponsors.html" class="block px-3 py-2 rounded hover:bg-green-600">Nos Sponsors</a>
+      <a href="rejoindre.html" class="block px-3 py-2 rounded hover:bg-green-600">Nous Rejoindre</a>
+    </div>
+  </nav>
 
-<script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-</script>
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 
-<!-- Hero section -->
-<section
-  class="relative text-center text-white bg-cover bg-center"
-  style="background-image: url('img/accueil/Accueil.jpg'); min-height: 320px;">
-  <!-- petit voile pour lisibilité du texte -->
-  <div class="absolute inset-0 bg-black/30"></div>
+  <!-- Hero section (responsive + overlay pour lisibilité) -->
+  <section class="relative bg-cover bg-center text-white"
+           style="background-image: url('img/accueil/Accueil.jpg');">
+    <div class="absolute inset-0 bg-black/35"></div>
 
-  <div class="relative min-h-[320px] md:min-h-[400px] flex flex-col justify-end px-4 md:px-6 pb-8">
-    <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-      Fanfare alliant dynamisme du Sud-Ouest et originalité au pays des Bandas !
-    </h1>
-  </div>
-</section>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="h-[320px] sm:h-[380px] md:h-[450px] flex items-end pb-6 sm:pb-8">
+        <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold leading-snug drop-shadow">
+          Fanfare alliant dynamisme du Sud-Ouest et originalité au pays des Bandas !
+        </h1>
+      </div>
+    </div>
+  </section>
 
-<!-- Boutons liens -->
-<section class="py-10 px-6">
-  <div class="max-w-6xl mx-auto grid gap-6 text-center
-              grid-cols-1 sm:grid-cols-2 md:grid-cols-3
-              lg:grid-cols-4 xl:grid-cols-5
-              justify-items-center">
-    <a href="fanfare.html"
-       class="w-full max-w-sm bg-white border border-green-300 rounded-xl p-6 shadow hover:bg-green-50">
-      <p class="text-lg font-bold mb-2">📜 Histoire de la Fanfare</p>
-      <p>Découvrez l’histoire de la Fanfare la Boucalaise</p>
-    </a>
-
-    <a href="musiciens.html"
-       class="w-full max-w-sm bg-white border border-green-300 rounded-xl p-6 shadow hover:bg-green-50">
-      <p class="text-lg font-bold mb-2">🎺 Nos Musiciens</p>
-      <p>Découvrez par pupitres, les musiciens qui font vivre la Fanfare !</p>
-    </a>
-
-    <a href="morceaux.html"
-       class="w-full max-w-sm bg-white border border-green-300 rounded-xl p-6 shadow hover:bg-green-50">
-      <p class="text-lg font-bold mb-2">🎶 Nos Morceaux</p>
-      <p>Découvrez nos morceaux alliant dynamisme et actualité !</p>
-    </a>
-
-    <a href="sponsors.html"
-       class="w-full max-w-sm bg-white border border-green-300 rounded-xl p-6 shadow hover:bg-green-50">
-      <p class="text-lg font-bold mb-2">🤝 Nos Sponsors</p>
-      <p>Découvrez nos sponsors !</p>
-    </a>
-
-    <a href="rejoindre.html"
-       class="w-full max-w-sm bg-white border border-green-300 rounded-xl p-6 shadow hover:bg-green-50">
-      <p class="text-lg font-bold mb-2">🤩 Nous Rejoindre</p>
-      <p>Musicien débutant ou confirmé, nous t'attendons !</p>
-    </a>
-  </div>
-</section>
-
-<!-- Prochain événement -->
-<section class="px-6 py-10 bg-green-50">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6">🎉 2025 - Nos événements Clés</h2>
-
-    <div class="grid gap-4
-                grid-cols-1 sm:grid-cols-2 md:grid-cols-3
-                lg:grid-cols-4 xl:grid-cols-5
+  <!-- Boutons liens (2 colonnes en mobile vertical, 3 max en tablette/phone large) -->
+  <section class="py-10 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto grid gap-4 sm:gap-6 text-center
+                grid-cols-2 sm:grid-cols-3
+                md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
                 justify-items-center">
-      <div class="w-full max-w-sm bg-white rounded-lg p-4 shadow">
-        <p class="text-lg font-semibold text-green-700">Fêtes du Boucau & de la Mer</p>
-        <p class="text-sm text-gray-600">Du 6 au 9 Juin</p>
-      </div>
 
-      <div class="w-full max-w-sm bg-white rounded-lg p-4 shadow">
-        <p class="text-lg font-semibold text-green-700">Répétitions quartiers</p>
-        <p class="text-sm text-gray-600">Vendredis 13 et 20 Juin</p>
-      </div>
+      <a href="fanfare.html"
+         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+        <p class="text-base md:text-lg font-bold mb-2">📜 Histoire</p>
+        <p class="text-sm md:text-base text-green-900/80">Découvrez l’histoire de la Fanfare la Boucalaise</p>
+      </a>
 
-      <div class="w-full max-w-sm bg-white rounded-lg p-4 shadow">
-        <p class="text-lg font-semibold text-green-700">Animation Camping - Lou Ptit Poun</p>
-        <p class="text-sm text-gray-600">17, 24 et 30 Juillet puis 07, 14 et 28 Août</p>
-      </div>
+      <a href="musiciens.html"
+         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+        <p class="text-base md:text-lg font-bold mb-2">🎺 Musiciens</p>
+        <p class="text-sm md:text-base text-green-900/80">Découvrez par pupitres, les musiciens qui font vivre la Fanfare</p>
+      </a>
 
-      <div class="w-full max-w-sm bg-white rounded-lg p-4 shadow">
-        <p class="text-lg font-semibold text-green-700">Guinguette</p>
-        <p class="text-sm text-gray-600">Samedi 20 Septembre</p>
-      </div>
+      <a href="morceaux.html"
+         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+        <p class="text-base md:text-lg font-bold mb-2">🎶 Morceaux</p>
+        <p class="text-sm md:text-base text-green-900/80">Découvrez nos morceaux alliant dynamisme et actualité</p>
+      </a>
 
-      <div class="w-full max-w-sm bg-white rounded-lg p-4 shadow">
-        <p class="text-lg font-semibold text-green-700">Sainte Cécile</p>
-        <p class="text-sm text-gray-600">Dimanche 23 Novembre</p>
+      <a href="sponsors.html"
+         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+        <p class="text-base md:text-lg font-bold mb-2">🤝 Sponsors</p>
+        <p class="text-sm md:text-base text-green-900/80">Découvrez nos sponsors</p>
+      </a>
+
+      <a href="rejoindre.html"
+         class="w-full min-w-[140px] bg-white border border-green-300 rounded-2xl p-4 md:p-6 shadow hover:bg-green-50 transition">
+        <p class="text-base md:text-lg font-bold mb-2">🤩 Rejoindre</p>
+        <p class="text-sm md:text-base text-green-900/80">Musicien débutant ou confirmé, on t’attend</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Prochain événement (grille responsive, 2 colonnes en mobile, 3 max tablette) -->
+  <section class="px-4 sm:px-6 py-10 bg-green-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-xl sm:text-2xl font-bold mb-6">🎉 2025 - Nos événements Clés</h2>
+
+      <div class="grid gap-4
+                  grid-cols-2 sm:grid-cols-3
+                  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5
+                  justify-items-center">
+
+        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+          <p class="text-base md:text-lg font-semibold text-green-700">Fêtes du Boucau & de la Mer</p>
+          <p class="text-sm text-gray-600">Du 6 au 9 Juin</p>
+        </div>
+
+        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+          <p class="text-base md:text-lg font-semibold text-green-700">Répétitions quartiers</p>
+          <p class="text-sm text-gray-600">Vendredis 13 et 20 Juin</p>
+        </div>
+
+        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+          <p class="text-base md:text-lg font-semibold text-green-700">Animation Camping - Lou Ptit Poun</p>
+          <p class="text-sm text-gray-600">17, 24, 30 Juillet · 07, 14, 28 Août</p>
+        </div>
+
+        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+          <p class="text-base md:text-lg font-semibold text-green-700">Guinguette</p>
+          <p class="text-sm text-gray-600">Samedi 20 Septembre</p>
+        </div>
+
+        <div class="w-full min-w-[140px] bg-white rounded-2xl p-4 shadow">
+          <p class="text-base md:text-lg font-semibold text-green-700">Sainte Cécile</p>
+          <p class="text-sm text-gray-600">Dimanche 23 Novembre</p>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Galerie -->
-<section class="px-6 py-10">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6">📸 Galerie</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="img/accueil/Accueil1.jpg" class="rounded shadow w-full h-40 sm:h-48 md:h-44 object-cover" alt="Image 1">
-      <img src="img/accueil/Accueil2.JPG" class="rounded shadow w-full h-40 sm:h-48 md:h-44 object-cover" alt="Image 2">
-      <img src="img/accueil/Accueil3.JPG" class="rounded shadow w-full h-40 sm:h-48 md:h-44 object-cover" alt="Image 3">
-      <img src="img/accueil/Accueil4.JPG" class="rounded shadow w-full h-40 sm:h-48 md:h-44 object-cover" alt="Image 4">
+  <!-- Galerie -->
+  <section class="px-4 sm:px-6 py-10">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-xl sm:text-2xl font-bold mb-6">📸 Galerie</h2>
+
+      <div class="grid gap-3 sm:gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+        <img src="img/accueil/Accueil1.jpg" class="rounded-2xl shadow w-full h-36 sm:h-44 md:h-48 object-cover" alt="Image 1">
+        <img src="img/accueil/Accueil2.JPG" class="rounded-2xl shadow w-full h-36 sm:h-44 md:h-48 object-cover" alt="Image 2">
+        <img src="img/accueil/Accueil3.JPG" class="rounded-2xl shadow w-full h-36 sm:h-44 md:h-48 object-cover" alt="Image 3">
+        <img src="img/accueil/Accueil4.JPG" class="rounded-2xl shadow w-full h-36 sm:h-44 md:h-48 object-cover" alt="Image 4">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-green-700 text-white py-6 text-center">
-  <p class="text-sm">📩 fanfare@la-boucalaise.com | 📞 07 81 07 65 46</p>
-  <div class="mt-2 space-x-4">
-    <a href="https://www.facebook.com/p/Fanfare-La-Boucalaise-100050930388001" target="_blank" class="underline">Facebook</a>
-    <a href="https://www.instagram.com/fanfare_la_boucalaise" target="_blank" class="underline">Instagram</a>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 text-center">
+    <p class="text-sm">📩 fanfare@la-boucalaise.com | 📞 07 81 07 65 46</p>
+    <div class="mt-2 space-x-4">
+      <a href="https://www.facebook.com/p/Fanfare-La-Boucalaise-100050930388001" target="_blank" class="underline">Facebook</a>
+      <a href="https://www.instagram.com/fanfare_la_boucalaise" target="_blank" class="underline">Instagram</a>
+    </div>
+  </footer>
 
 </body>
 </html>
